@@ -64,7 +64,7 @@ export default function ServiceDetail() {
               <div className="detail-cta-card">
                 <h3>Need This Service?</h3>
                 <p>Contact us for a free consultation and quote.</p>
-                <a href="tel:+60176313439" className="btn btn-primary" style={{ justifyContent: 'center', width: '100%' }}>Call Now</a>
+                <a href="tel:+60166785404" className="btn btn-primary" style={{ justifyContent: 'center', width: '100%' }}>Call Now</a>
               </div>
             </div>
           </div>

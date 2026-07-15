@@ -124,10 +124,11 @@ export const areas = [
 ]
 
 export const contactInfo = {
-  phone: '+60 17-631 3439',
-  phoneRaw: '+60176313439',
-  whatsapp: '+60 11-6176 4393',
-  whatsappRaw: '601161764393',
+  phone: '+60 16-678 5404',
+  phoneRaw: '+60166785404',
+  whatsapp: '+60 16-678 5404',
+  whatsappRaw: '60166785404',
+  whatsappLink: 'https://wa.me/60166785404?text=KL%20contractors%E2%80%93%20I%20need%20to%20book%20urgent%20service',
   email: 'info@klcontractor.com',
   address: 'Kuala Lumpur, Wilayah Persekutuan, Malaysia',
   hours: '24/7 Emergency Service',
