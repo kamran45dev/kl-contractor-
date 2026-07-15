@@ -1,0 +1,33 @@
+import Hero from '../components/Hero'
+import ServicesGrid from '../components/ServicesGrid'
+import WhyUs from '../components/WhyUs'
+import Reviews from '../components/Reviews'
+import ServiceAreas from '../components/ServiceAreas'
+import CTASection from '../components/CTASection'
+import { Link } from 'react-router-dom'
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      
+      <section className="section">
+        <div className="container">
+          <div className="section-title" style={{ textAlign: 'center' }}>Our Services</div>
+          <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
+            We specialize in all types of home and commercial services in Kuala Lumpur.
+          </p>
+          <ServicesGrid limit={6} />
+          <div style={{ textAlign: 'center', marginTop: 32 }}>
+            <Link to="/services" className="btn btn-outline">View All Services</Link>
+          </div>
+        </div>
+      </section>
+
+      <WhyUs />
+      <Reviews />
+      <ServiceAreas />
+      <CTASection />
+    </>
+  )
+}
