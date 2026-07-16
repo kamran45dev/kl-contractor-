@@ -2,16 +2,18 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--primary);
+  background: rgba(28, 22, 17, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(253, 248, 243, 0.06);
   padding: 0 0;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 72px;
 }
 
 .logo {
@@ -20,22 +22,28 @@
 }
 
 .logo-img {
-  height: 50px;
+  height: 48px;
   width: auto;
   display: block;
+  transition: var(--transition);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.02);
 }
 
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 36px;
 }
 
 .nav-link {
-  color: rgba(253, 248, 243, 0.75);
-  font-size: 0.95rem;
+  color: rgba(253, 248, 243, 0.7);
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: var(--transition);
+  transition: var(--transition-linear);
   position: relative;
+  letter-spacing: 0.3px;
 }
 
 .nav-link:hover {
@@ -46,11 +54,13 @@
   content: '';
   position: absolute;
   bottom: -4px;
-  left: 0;
+  left: 50%;
   width: 0;
   height: 2px;
   background: var(--accent);
-  transition: var(--transition);
+  transition: var(--transition-linear);
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .nav-link:hover::after {
@@ -66,15 +76,19 @@
 .header-phone {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--accent);
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: var(--transition);
+  font-size: 0.9rem;
+  transition: var(--transition-linear);
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: rgba(232, 145, 74, 0.1);
 }
 
 .header-phone:hover {
-  color: var(--accent-hover);
+  background: rgba(232, 145, 74, 0.18);
+  color: var(--accent);
 }
 
 .mobile-toggle {
@@ -97,19 +111,25 @@
 }
 
 @media (max-width: 768px) {
+  .header-inner {
+    height: 64px;
+  }
+
   .nav {
     position: fixed;
-    top: 70px;
+    top: 64px;
     left: 0;
     right: 0;
-    background: var(--primary);
+    background: rgba(28, 22, 17, 0.98);
+    backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 20px;
-    gap: 16px;
+    padding: 24px;
+    gap: 20px;
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
     transition: var(--transition);
+    border-bottom: 1px solid rgba(253, 248, 243, 0.06);
   }
 
   .nav.open {
@@ -120,9 +140,5 @@
 
   .mobile-toggle {
     display: flex;
-  }
-
-  .header-phone span {
-    display: none;
   }
 }

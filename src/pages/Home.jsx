@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero />
       
-      <section className="section">
+      <section className="section reveal">
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Our Services</div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
@@ -24,9 +24,9 @@ export default function Home() {
         </div>
       </section>
 
-      <WhyUs />
-      <Reviews />
-      <ServiceAreas />
+      <div className="reveal"><WhyUs /></div>
+      <div className="reveal"><Reviews /></div>
+      <div className="reveal"><ServiceAreas /></div>
       <CTASection />
     </>
   )

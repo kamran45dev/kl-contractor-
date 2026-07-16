@@ -5,7 +5,7 @@ import './About.css'
 export default function About() {
   return (
     <>
-      <section className="section" style={{ paddingTop: 120 }}>
+      <section className="section reveal" style={{ paddingTop: 120 }}>
         <div className="container">
           <div className="about-layout">
             <div className="about-content">
@@ -54,7 +54,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section-muted">
+      <section className="section section-muted reveal">
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Why Trust Us?</div>
           <div className="trust-grid">
@@ -82,7 +82,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section reveal">
         <div className="container" style={{ textAlign: 'center' }}>
           <div className="section-title" style={{ textAlign: 'center' }}>Get In Touch</div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 32px' }}>
