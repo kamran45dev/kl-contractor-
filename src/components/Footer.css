@@ -4,6 +4,12 @@
   padding: 60px 0 0;
 }
 
+.footer .logo-img {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  height: 48px;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
