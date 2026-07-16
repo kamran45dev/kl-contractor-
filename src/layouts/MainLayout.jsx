@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import WhatsAppFloat from '../components/WhatsAppFloat'
+import ContactFloat from '../components/ContactFloat'
 
 export default function MainLayout() {
   return (
@@ -10,7 +10,7 @@ export default function MainLayout() {
       <main>
         <Outlet />
       </main>
-      <WhatsAppFloat />
+      <ContactFloat />
       <Footer />
     </>
   )
