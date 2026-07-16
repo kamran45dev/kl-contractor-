@@ -3,15 +3,16 @@
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary) 0%, #2D241E 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(232, 145, 74, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 70% 80%, rgba(232, 145, 74, 0.05) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(28, 22, 17, 0.88) 0%, rgba(45, 36, 30, 0.85) 100%);
   pointer-events: none;
 }
 

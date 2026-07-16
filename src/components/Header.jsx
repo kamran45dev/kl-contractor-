@@ -7,8 +7,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-inner">
         <Link to="/" className="logo">
-          <span className="logo-icon">K</span>
-          <span className="logo-text">KL Contractor</span>
+          <img src="/logo.png" alt="KL Contractor" className="logo-img" />
         </Link>
 
         <nav className="nav">

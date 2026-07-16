@@ -8,8 +8,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <div className="logo" style={{ marginBottom: 16 }}>
-            <span className="logo-icon">K</span>
-            <span className="logo-text" style={{ color: 'var(--text-on-dark)' }}>KL Contractor</span>
+            <img src="/logo.png" alt="KL Contractor" className="logo-img" />
           </div>
           <p>We provide professional home and commercial services across Kuala Lumpur with a focus on quality, honesty, and customer satisfaction.</p>
           <div className="footer-social">
