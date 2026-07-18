@@ -9,7 +9,7 @@ const serviceHeroImages = {
   'toilet-repair-installation': '/images/toilet-repair.jpg',
   'drain-cleaning': '/images/drain-cleaning.jpg',
   'water-pressure': '/images/pipe-repair.avif',
-  'water-heater': '/images/water-heater.jpg',
+  'water-heater': '/images/water-heater.webp',
   'booster-pump': '/images/booster-pump.webp',
   'waterproofing': '/images/waterproofing.jpg',
   'sink-basin-shower': '/images/sink-shower.jpg',
