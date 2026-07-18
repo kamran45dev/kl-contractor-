@@ -76,13 +76,13 @@
 .header-phone {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: var(--primary);
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
   transition: var(--transition-linear);
-  padding: 10px 20px;
+  padding: 6px 14px;
   border-radius: 50px;
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
   box-shadow: 0 4px 16px rgba(232, 145, 74, 0.35);
