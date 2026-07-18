@@ -1,16 +1,26 @@
 import './GalleryGrid.css'
 
-export default function GalleryGrid() {
-  const items = Array.from({ length: 6 }, (_, i) => i + 1)
+const galleryImages = [
+  { src: '/images/toilet-repair.jpg', alt: 'Bathroom renovation with gold fixtures' },
+  { src: '/images/sink-shower.jpg', alt: 'Neutral bathroom with wood and brass' },
+  { src: '/images/kitchen-renovation.jpg', alt: 'Midcentury kitchen with warm wood' },
+  { src: '/images/kitchen-alt.jpg', alt: 'Modern kitchen with pendant lights' },
+  { src: '/images/flooring.jpg', alt: 'Wood plank flooring installation' },
+  { src: '/images/house-painting.jpg', alt: 'Interior painting with roller' },
+  { src: '/images/gallery-water-heater.jpg', alt: 'Water heater installation' },
+  { src: '/images/waterproofing.jpg', alt: 'Waterproofing membrane application' },
+  { src: '/images/gallery-booster-pump.webp', alt: 'Booster pump wall installation' },
+  { src: '/images/gallery-water-heater2.jpg', alt: 'Water heater and boiler system' },
+  { src: '/images/gallery-drain-pump.jpg', alt: 'Drain cleaning equipment' },
+  { src: '/images/gallery-water-heater3.jpg', alt: 'Water heater replacement tanks' },
+]
 
+export default function GalleryGrid() {
   return (
     <div className="gallery-grid">
-      {items.map(i => (
+      {galleryImages.map((img, i) => (
         <div key={i} className="gallery-item">
-          <div className="gallery-placeholder">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Project Photo {i}</span>
-          </div>
+          <img src={img.src} alt={img.alt} className="gallery-img" loading="lazy" />
         </div>
       ))}
     </div>

@@ -1,8 +1,30 @@
+.detail-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.detail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(28, 22, 17, 0.9) 0%, rgba(45, 36, 30, 0.85) 100%);
+  pointer-events: none;
+}
+
+.detail-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 .detail-back {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--text-light);
+  color: rgba(253, 248, 243, 0.6);
   font-size: 0.95rem;
   font-weight: 500;
   margin-bottom: 24px;
@@ -19,19 +41,8 @@
   gap: 24px;
 }
 
-.detail-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: var(--radius);
-  background: rgba(232, 145, 74, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.detail-emoji {
-  font-size: 2rem;
+.detail-header .section-title {
+  color: var(--text-on-dark);
 }
 
 .detail-content {

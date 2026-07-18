@@ -45,10 +45,7 @@ export default function About() {
               </div>
             </div>
             <div className="about-image">
-              <div className="about-placeholder">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <span>Your Team Photo Here</span>
-              </div>
+              <img src="/images/team-group.jpg" alt="KL Contractor Team" className="about-team-img" />
             </div>
           </div>
         </div>
@@ -77,6 +74,20 @@ export default function About() {
               <div className="trust-badge">✓</div>
               <h4>Guaranteed Work</h4>
               <p>We stand behind every job with our satisfaction guarantee.</p>
+            </div>
+          </div>
+          <div className="about-technician">
+            <div className="about-technician-image">
+              <img src="/images/technician.jpg" alt="KL Contractor Technician" />
+            </div>
+            <div className="about-technician-text">
+              <h3>Meet Your Technician</h3>
+              <p>Every job is handled by a licensed, experienced professional who takes pride in their work. From emergency repairs to full renovations, we send someone you can trust.</p>
+              <div className="about-technician-badges">
+                <span> Licensed & Certified</span>
+                <span> Years of Experience</span>
+                <span> Fully Insured</span>
+              </div>
             </div>
           </div>
         </div>

@@ -66,6 +66,11 @@ export default function Contact() {
                 View on Google Maps
               </a>
             </div>
+
+            <div className="contact-van">
+              <img src="/images/service-van.avif" alt="KL Contractor service van" className="contact-van-img" />
+              <p className="contact-van-caption">We bring the workshop to you — fully equipped and ready to serve.</p>
+            </div>
           </div>
 
           <div className="contact-form-wrapper">

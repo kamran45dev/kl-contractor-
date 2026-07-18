@@ -46,6 +46,29 @@
   color: var(--accent);
 }
 
+.contact-van {
+  margin-top: 32px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.contact-van-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-van-caption {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+  padding: 12px 16px;
+  background: var(--white);
+  font-style: italic;
+}
+
 @media (max-width: 900px) {
   .contact-layout {
     grid-template-columns: 1fr;

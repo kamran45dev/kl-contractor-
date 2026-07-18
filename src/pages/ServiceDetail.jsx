@@ -3,10 +3,19 @@ import { services } from '../data/services'
 import CTASection from '../components/CTASection'
 import './ServiceDetail.css'
 
-const icons = {
-  emergency: '🚨', pipe: '🔧', toilet: '🚽', drain: '💧',
-  pressure: '📊', heater: '🔥', pump: '⚡', waterproof: '🛡️',
-  sink: '🚰', renovation: '🏠', painting: '🎨', flooring: '🏗️',
+const serviceHeroImages = {
+  'emergency-plumbing': '/images/emergency.webp',
+  'pipe-repair-replacement': '/images/pipe-repair.avif',
+  'toilet-repair-installation': '/images/toilet-repair.jpg',
+  'drain-cleaning': '/images/drain-cleaning.jpg',
+  'water-pressure': '/images/pipe-repair.avif',
+  'water-heater': '/images/water-heater.jpg',
+  'booster-pump': '/images/booster-pump.webp',
+  'waterproofing': '/images/waterproofing.jpg',
+  'sink-basin-shower': '/images/sink-shower.jpg',
+  'kitchen-renovation': '/images/kitchen-renovation.jpg',
+  'house-painting': '/images/house-painting.jpg',
+  'flooring-services': '/images/flooring.jpg',
 }
 
 export default function ServiceDetail() {
@@ -27,16 +36,20 @@ export default function ServiceDetail() {
 
   return (
     <>
-      <section className="section detail-hero" style={{ paddingTop: 120 }}>
-        <div className="container">
+      <section
+        className="section detail-hero"
+        style={{
+          paddingTop: 120,
+          backgroundImage: `url(${serviceHeroImages[service.slug]})`,
+        }}
+      >
+        <div className="detail-hero-overlay"></div>
+        <div className="container detail-hero-content">
           <Link to="/services" className="detail-back">&larr; Back to Services</Link>
           <div className="detail-header">
-            <div className="detail-icon">
-              <span className="detail-emoji">{icons[service.icon] || '🛠️'}</span>
-            </div>
             <div>
               <h1 className="section-title" style={{ marginBottom: 12 }}>{service.title}</h1>
-              <p className="section-subtitle" style={{ marginBottom: 0 }}>{service.shortDesc}</p>
+              <p className="section-subtitle" style={{ marginBottom: 0, color: 'rgba(253, 248, 243, 0.75)' }}>{service.shortDesc}</p>
             </div>
           </div>
         </div>

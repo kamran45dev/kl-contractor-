@@ -4,7 +4,7 @@ import './Hero.css'
 
 export default function Hero() {
   return (
-    <section className="hero" style={{ backgroundImage: 'url(/cover.png)' }}>
+    <section className="hero" style={{ backgroundImage: 'url(/images/pipe-repair.avif)' }}>
       <div className="hero-overlay"></div>
       <div className="container hero-content">
         <span className="hero-badge">24/7 Emergency Service</span>
