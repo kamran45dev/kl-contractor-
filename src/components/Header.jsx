@@ -13,7 +13,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-inner">
         <Link to="/" className="logo" onClick={closeMenu}>
-          <img src="/logo.svg" alt="KL Contractor" className="logo-img" />
+          <img src="/logo.svg" alt="KL Plumber" className="logo-img" />
         </Link>
 
         <nav className={`nav${menuOpen ? ' open' : ''}`}>

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <div className="logo" style={{ marginBottom: 16 }}>
-            <img src="/logo.svg" alt="KL Contractor" className="logo-img" />
+            <img src="/logo.svg" alt="KL Plumber" className="logo-img" />
           </div>
           <p>We provide professional home and commercial services across Kuala Lumpur with a focus on quality, honesty, and customer satisfaction.</p>
           <div className="footer-social">
@@ -62,7 +62,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} KL Contractor. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} KL Plumber. All rights reserved.</p>
         </div>
       </div>
     </footer>

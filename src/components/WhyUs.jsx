@@ -28,7 +28,7 @@ export default function WhyUs() {
   return (
     <section className="section section-dark">
       <div className="container">
-        <div className="section-title" style={{ textAlign: 'center' }}>Why Choose KL Contractor?</div>
+        <div className="section-title" style={{ textAlign: 'center' }}>Why Choose KL Plumber?</div>
         <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
           We deliver more than just services — we deliver trust, quality, and peace of mind.
         </p>

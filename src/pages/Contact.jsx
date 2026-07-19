@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-van">
-              <img src="/images/service-van.avif" alt="KL Contractor service van" className="contact-van-img" />
+              <img src="/images/service-van.avif" alt="KL Plumber service van" className="contact-van-img" />
               <p className="contact-van-caption">We bring the workshop to you — fully equipped and ready to serve.</p>
             </div>
           </div>

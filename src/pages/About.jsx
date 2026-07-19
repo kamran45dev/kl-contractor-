@@ -9,12 +9,12 @@ export default function About() {
         <div className="container">
           <div className="about-layout">
             <div className="about-content">
-              <div className="section-title">About KL Contractor</div>
+              <div className="section-title">About KL Plumber</div>
               <p className="section-subtitle" style={{ marginBottom: 24 }}>
                 Your trusted partner for home and commercial services in Kuala Lumpur.
               </p>
               <p>
-                At KL Contractor, we started with one simple mission: to provide fast, reliable, and 
+                At KL Plumber, we started with one simple mission: to provide fast, reliable, and 
                 affordable home and commercial services in Kuala Lumpur. Founded by a team of licensed 
                 professionals with years of combined experience, we saw a growing need for high-quality 
                 contractors who could deliver both expertise and exceptional customer service.
@@ -45,7 +45,7 @@ export default function About() {
               </div>
             </div>
             <div className="about-image">
-              <img src="/images/team-group.jpg" alt="KL Contractor Team" className="about-team-img" />
+              <img src="/images/team-group.jpg" alt="KL Plumber Team" className="about-team-img" />
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function About() {
           </div>
           <div className="about-technician">
             <div className="about-technician-image">
-              <img src="/images/technician.jpg" alt="KL Contractor Technician" />
+              <img src="/images/technician.jpg" alt="KL Plumber Technician" />
             </div>
             <div className="about-technician-text">
               <h3>Meet Your Technician</h3>
