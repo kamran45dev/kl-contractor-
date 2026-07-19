@@ -1,4 +1,3 @@
-import { contactInfo } from '../data/services'
 import './ContactForm.css'
 
 export default function ContactForm() {
@@ -13,10 +12,6 @@ export default function ContactForm() {
           <label htmlFor="phone">Phone Number *</label>
           <input type="tel" id="phone" required placeholder="e.g. 012-345 6789" />
         </div>
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" placeholder="your@email.com" />
       </div>
       <div className="form-group">
         <label htmlFor="service">Service Needed *</label>
