@@ -44,16 +44,6 @@ export default function Reviews() {
             </div>
           ))}
         </div>
-        <div style={{ textAlign: 'center', marginTop: 32 }}>
-          <a
-            href="https://search.google.com/local/reviews?placeid=ChIJS9LlXEBHzDERJaGngNoCUMI"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-          >
-            See All Reviews on Google
-          </a>
-        </div>
       </div>
     </section>
   )

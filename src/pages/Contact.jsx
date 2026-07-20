@@ -45,18 +45,6 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="contact-google">
-              <a
-                href="https://search.google.com/local/reviews?placeid=ChIJS9LlXEBHzDERJaGngNoCUMI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.56 12.22c0-.68-.06-1.36-.18-2.02H12v3.82h5.38a4.56 4.56 0 0 1-1.98 2.99v2.49h3.2c1.88-1.73 2.96-4.28 2.96-7.28z"/><path d="M12 22c2.68 0 4.92-.89 6.56-2.4l-3.2-2.49c-.89.6-2.02.95-3.36.95-2.58 0-4.77-1.74-5.55-4.09H3.1v2.57C4.77 19.76 8.14 22 12 22z"/><path d="M6.45 14.07c-.19-.57-.3-1.18-.3-1.79s.11-1.22.3-1.79V7.92H3.1A9.93 9.93 0 0 0 2 12c0 1.61.39 3.14 1.1 4.5l2.35-1.83z"/><path d="M12 6.14c1.46 0 2.77.5 3.8 1.49l2.85-2.85C16.91 3.1 14.67 2 12 2 8.14 2 4.77 4.24 3.1 7.5l3.35 2.57c.78-2.35 2.97-4.09 5.55-4.09z"/></svg>
-                View on Google Maps
-              </a>
-            </div>
-
             <div className="contact-van">
               <img src="/images/service-van.avif" alt="KL Plumber service van" className="contact-van-img" />
               <p className="contact-van-caption">We bring the workshop to you — fully equipped and ready to serve.</p>
