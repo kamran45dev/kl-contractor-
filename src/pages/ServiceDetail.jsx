@@ -49,7 +49,7 @@ export default function ServiceDetail() {
           <div className="detail-header">
             <div>
               <h1 className="section-title" style={{ marginBottom: 12 }}>{service.title}</h1>
-              <p className="section-subtitle" style={{ marginBottom: 0, color: 'rgba(253, 248, 243, 0.75)' }}>{service.shortDesc}</p>
+              <p className="section-subtitle" style={{ marginBottom: 0, color: 'rgba(255, 255, 255, 0.9)' }}>{service.shortDesc}</p>
             </div>
           </div>
         </div>

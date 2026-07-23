@@ -54,20 +54,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 28px rgba(232, 145, 74, 0.4);
+  box-shadow: 0 6px 28px rgba(14, 165, 233, 0.4);
   transition: var(--transition);
   position: relative;
 }
 
 .contact-float-main:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 36px rgba(232, 145, 74, 0.5);
+  box-shadow: 0 8px 36px rgba(14, 165, 233, 0.5);
 }
 
 .contact-float.active .contact-float-main {
   background: var(--primary);
   color: var(--text-on-dark);
-  box-shadow: 0 6px 28px rgba(28, 22, 17, 0.3);
+  box-shadow: 0 6px 28px rgba(12, 74, 110, 0.3);
   transform: rotate(90deg);
 }
 

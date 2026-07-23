@@ -20,13 +20,13 @@
   right: 24px;
   font-size: 4rem;
   line-height: 1;
-  color: rgba(232, 145, 74, 0.08);
+  color: rgba(14, 165, 233, 0.08);
   font-weight: 800;
 }
 
 .review-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(28, 22, 17, 0.1);
+  box-shadow: 0 12px 48px rgba(14, 165, 233, 0.08);
 }
 
 .review-stars {

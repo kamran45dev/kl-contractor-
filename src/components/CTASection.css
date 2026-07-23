@@ -1,5 +1,5 @@
 .cta-section {
-  background: linear-gradient(135deg, var(--accent) 0%, #c7712e 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #0284C7 100%);
   padding: 100px 0;
   text-align: center;
   position: relative;
@@ -25,15 +25,15 @@
 .cta-title {
   font-size: 2.4rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--white);
   margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
 
 .cta-text {
   font-size: 1.1rem;
-  color: var(--primary);
-  opacity: 0.85;
+  color: var(--white);
+  opacity: 0.9;
   margin-bottom: 36px;
   line-height: 1.7;
 }
@@ -48,7 +48,14 @@
 .cta-btn {
   font-size: 1.05rem;
   padding: 16px 36px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background: var(--white);
+  color: var(--accent-hover);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cta-btn:hover {
+  background: var(--primary);
+  color: var(--white);
 }
 
 @media (max-width: 600px) {

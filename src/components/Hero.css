@@ -12,7 +12,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(28, 22, 17, 0.92) 0%, rgba(45, 36, 30, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(12, 74, 110, 0.92) 0%, rgba(7, 89, 133, 0.88) 100%);
   pointer-events: none;
 }
 
@@ -23,7 +23,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 50%, rgba(232, 145, 74, 0.06) 0%, transparent 50%);
+  background: radial-gradient(circle at 30% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
   animation: float 8s ease-in-out infinite;
 }
 
@@ -36,7 +36,7 @@
 .hero-badge {
   display: inline-block;
   padding: 8px 22px;
-  background: rgba(232, 145, 74, 0.12);
+  background: rgba(14, 165, 233, 0.12);
   color: var(--accent);
   border-radius: 50px;
   font-size: 0.82rem;
@@ -44,7 +44,7 @@
   letter-spacing: 0.8px;
   text-transform: uppercase;
   margin-bottom: 24px;
-  border: 1px solid rgba(232, 145, 74, 0.15);
+  border: 1px solid rgba(14, 165, 233, 0.15);
 }
 
 .hero-title {
@@ -57,14 +57,14 @@
 }
 
 .hero-highlight {
-  background: linear-gradient(135deg, var(--accent) 0%, #F0A86A 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .hero-subtitle {
-  color: rgba(253, 248, 243, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 40px;
@@ -90,7 +90,7 @@
 }
 
 .hero-badges span {
-  color: rgba(253, 248, 243, 0.4);
+  color: rgba(194, 236, 254, 0.9);
   font-size: 0.88rem;
   display: flex;
   align-items: center;
