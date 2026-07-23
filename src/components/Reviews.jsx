@@ -25,7 +25,7 @@ const testimonials = [
 
 export default function Reviews() {
   return (
-    <section className="section section-muted">
+    <section className="section section-alt">
       <div className="container">
         <div className="section-title" style={{ textAlign: 'center' }}>What Our Clients Say</div>
         <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>

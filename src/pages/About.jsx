@@ -51,7 +51,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section-muted reveal">
+      <section className="section section-alt reveal">
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Why Trust Us?</div>
           <div className="trust-grid">
