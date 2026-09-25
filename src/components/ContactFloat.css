@@ -75,6 +75,13 @@
   transform: rotate(90deg) scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .contact-float {
+    bottom: 90px;
+    right: 20px;
+  }
+}
+
 @keyframes slide-in {
   from {
     opacity: 0;

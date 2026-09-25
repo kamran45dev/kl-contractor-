@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContactFloat from '../components/ContactFloat'
+import StickyCTA from '../components/StickyCTA'
 
 export default function MainLayout() {
   return (
@@ -11,6 +12,7 @@ export default function MainLayout() {
         <Outlet />
       </main>
       <ContactFloat />
+      <StickyCTA />
       <Footer />
     </>
   )

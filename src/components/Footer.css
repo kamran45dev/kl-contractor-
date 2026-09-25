@@ -10,7 +10,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 48px;
 }
 
@@ -103,10 +103,16 @@
 
 @media (max-width: 900px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .footer-brand {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

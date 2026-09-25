@@ -157,6 +157,20 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
 }
 
+.btn-outline-light {
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline-light:hover {
+  background: var(--white);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
 .btn-dark {
   background: var(--primary);
   color: var(--white);

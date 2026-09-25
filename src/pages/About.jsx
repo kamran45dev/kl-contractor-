@@ -57,6 +57,11 @@ export default function About() {
           <div className="trust-grid">
             <div className="trust-item">
               <div className="trust-badge">✓</div>
+              <h4>SSM Registered Business</h4>
+              <p>Officially registered with SSM Malaysia, so you're dealing with a verified business.</p>
+            </div>
+            <div className="trust-item">
+              <div className="trust-badge">✓</div>
               <h4>Licensed & Insured</h4>
               <p>Fully licensed and insured for your peace of mind.</p>
             </div>
