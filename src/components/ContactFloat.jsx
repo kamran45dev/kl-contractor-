@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { contactInfo } from '../data/services'
 import './ContactFloat.css'
 
-export default function ContactFloat() {
+export default function ContactFloat({ raised }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={`contact-float ${open ? 'active' : ''}`}>
+    <div className={`contact-float ${open ? 'active' : ''}${raised ? ' raised' : ''}`}>
       {open && (
         <>
           <a

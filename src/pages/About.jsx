@@ -1,5 +1,6 @@
 import { contactInfo } from '../data/services'
 import CTASection from '../components/CTASection'
+import CountUp from '../components/CountUp'
 import './About.css'
 
 export default function About() {
@@ -27,19 +28,19 @@ export default function About() {
 
               <div className="about-stats">
                 <div className="about-stat">
-                  <span className="stat-number">157+</span>
+                  <span className="stat-number"><CountUp value="157+" /></span>
                   <span className="stat-label">Google Reviews</span>
                 </div>
                 <div className="about-stat">
-                  <span className="stat-number">4.8</span>
+                  <span className="stat-number"><CountUp value="4.8" /></span>
                   <span className="stat-label">Star Rating</span>
                 </div>
                 <div className="about-stat">
-                  <span className="stat-number">6+</span>
+                  <span className="stat-number"><CountUp value="6+" /></span>
                   <span className="stat-label">Years Experience</span>
                 </div>
                 <div className="about-stat">
-                  <span className="stat-number">100%</span>
+                  <span className="stat-number"><CountUp value="100%" /></span>
                   <span className="stat-label">Satisfaction</span>
                 </div>
               </div>

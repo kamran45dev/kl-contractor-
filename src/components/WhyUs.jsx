@@ -1,3 +1,4 @@
+import CountUp from './CountUp'
 import './WhyUs.css'
 
 const stats = [
@@ -38,7 +39,7 @@ export default function WhyUs() {
         <div className="stats-row">
           {stats.map((s, i) => (
             <div key={i} className="stat-item">
-              <span className="stat-number">{s.number}</span>
+              <span className="stat-number"><CountUp value={s.number} /></span>
               <span className="stat-label">{s.label}</span>
             </div>
           ))}

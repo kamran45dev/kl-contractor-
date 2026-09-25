@@ -7,6 +7,11 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 14px;
+  transition: bottom 0.25s ease;
+}
+
+.contact-float.raised {
+  bottom: 108px;
 }
 
 .contact-float-option {
@@ -77,8 +82,12 @@
 
 @media (max-width: 768px) {
   .contact-float {
-    bottom: 90px;
+    bottom: 20px;
     right: 20px;
+  }
+
+  .contact-float.raised {
+    bottom: 158px;
   }
 }
 
