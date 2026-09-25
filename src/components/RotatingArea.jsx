@@ -10,7 +10,7 @@ export default function RotatingArea() {
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (reduceMotion) return
-    const id = setInterval(() => setI((prev) => (prev + 1) % words.length), 500)
+    const id = setInterval(() => setI((prev) => (prev + 1) % words.length), 1000)
     return () => clearInterval(id)
   }, [])
 

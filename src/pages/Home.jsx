@@ -11,7 +11,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      
+
+      <div className="reveal"><HowItWorks /></div>
+
       <section className="section reveal">
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Our Services</div>
@@ -25,7 +27,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="reveal"><HowItWorks /></div>
       <div className="reveal"><WhyUs /></div>
       <div className="reveal"><Reviews /></div>
       <div className="reveal"><ServiceAreas /></div>
