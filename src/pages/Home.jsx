@@ -1,5 +1,6 @@
 import Hero from '../components/Hero'
 import ServicesGrid from '../components/ServicesGrid'
+import HowItWorks from '../components/HowItWorks'
 import WhyUs from '../components/WhyUs'
 import Reviews from '../components/Reviews'
 import ServiceAreas from '../components/ServiceAreas'
@@ -24,6 +25,7 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="reveal"><HowItWorks /></div>
       <div className="reveal"><WhyUs /></div>
       <div className="reveal"><Reviews /></div>
       <div className="reveal"><ServiceAreas /></div>
