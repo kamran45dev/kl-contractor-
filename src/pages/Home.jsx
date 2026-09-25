@@ -5,6 +5,7 @@ import WhyUs from '../components/WhyUs'
 import Reviews from '../components/Reviews'
 import ServiceAreas from '../components/ServiceAreas'
 import CTASection from '../components/CTASection'
+import Reveal from '../components/Reveal'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -12,9 +13,9 @@ export default function Home() {
     <>
       <Hero />
 
-      <div className="reveal"><HowItWorks /></div>
+      <HowItWorks />
 
-      <section className="section section-alt reveal">
+      <Reveal as="section" className="section section-alt">
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Our Services</div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
@@ -25,11 +26,11 @@ export default function Home() {
             <Link to="/services" className="btn btn-outline">View All Services</Link>
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <div className="reveal"><WhyUs /></div>
-      <div className="reveal"><Reviews /></div>
-      <div className="reveal"><ServiceAreas /></div>
+      <WhyUs />
+      <Reviews />
+      <ServiceAreas />
       <CTASection />
     </>
   )

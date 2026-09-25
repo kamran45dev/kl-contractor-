@@ -1,11 +1,12 @@
 import Reviews from '../components/Reviews'
 import TrustBadges from '../components/TrustBadges'
 import CTASection from '../components/CTASection'
+import Reveal from '../components/Reveal'
 
 export default function Testimonials() {
   return (
     <>
-      <section className="section" style={{ paddingTop: 120, paddingBottom: 0 }}>
+      <Reveal as="section" className="section" style={{ paddingTop: 120, paddingBottom: 0 }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <div className="section-title">Customer Reviews</div>
           <p className="section-subtitle" style={{ margin: '0 auto 32px' }}>
@@ -16,7 +17,7 @@ export default function Testimonials() {
             <TrustBadges />
           </div>
         </div>
-      </section>
+      </Reveal>
       <Reviews />
       <CTASection />
     </>

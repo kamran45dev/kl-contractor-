@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import CTASection from '../components/CTASection'
+import Reveal from '../components/Reveal'
+import { staggerDelay, sideFor } from '../utils/reveal'
 import './FAQ.css'
 
 const faqs = [
@@ -33,15 +35,15 @@ const faqs = [
   },
 ]
 
-function FAQItem({ item, isOpen, onClick }) {
+function FAQItem({ item, isOpen, onClick, direction, delay }) {
   return (
-    <div className={`faq-item${isOpen ? ' open' : ''}`}>
+    <Reveal className={`faq-item${isOpen ? ' open' : ''}`} direction={direction} delay={delay}>
       <button className="faq-question" onClick={onClick} aria-expanded={isOpen}>
         {item.q}
         <svg className="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       {isOpen && <p className="faq-answer">{item.a}</p>}
-    </div>
+    </Reveal>
   )
 }
 
@@ -50,7 +52,7 @@ export default function FAQ() {
 
   return (
     <>
-      <section className="section" style={{ paddingTop: 120 }}>
+      <Reveal as="section" className="section" style={{ paddingTop: 120 }}>
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
@@ -59,15 +61,17 @@ export default function FAQ() {
           <div className="faq-list">
             {faqs.map((item, i) => (
               <FAQItem
-                key={i}
+                key={item.q}
                 item={item}
                 isOpen={openIndex === i}
                 onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
+                direction={sideFor(i)}
+                delay={staggerDelay(i, 0.08, 4)}
               />
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
       <CTASection />
     </>
   )

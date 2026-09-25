@@ -1,8 +1,9 @@
 import GalleryGrid from '../components/GalleryGrid'
+import Reveal from '../components/Reveal'
 
 export default function Gallery() {
   return (
-    <section className="section" style={{ paddingTop: 120 }}>
+    <Reveal as="section" className="section" style={{ paddingTop: 120 }}>
       <div className="container">
         <div className="section-title">Our Projects</div>
         <p className="section-subtitle">
@@ -10,6 +11,6 @@ export default function Gallery() {
         </p>
         <GalleryGrid />
       </div>
-    </section>
+    </Reveal>
   )
 }

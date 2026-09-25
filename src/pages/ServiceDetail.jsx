@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { services } from '../data/services'
 import CTASection from '../components/CTASection'
+import Reveal from '../components/Reveal'
 import './ServiceDetail.css'
 
 const serviceHeroImages = {
@@ -58,11 +59,11 @@ export default function ServiceDetail() {
       <section className="section">
         <div className="container">
           <div className="detail-content">
-            <div className="detail-main">
+            <Reveal className="detail-main" direction="left">
               <h2>About This Service</h2>
               <p>{service.fullDesc}</p>
-            </div>
-            <div className="detail-sidebar">
+            </Reveal>
+            <Reveal className="detail-sidebar" direction="right">
               <div className="detail-features-card">
                 <h3>What We Cover</h3>
                 <ul className="detail-features">
@@ -79,7 +80,7 @@ export default function ServiceDetail() {
                 <p>Contact us for a free consultation and quote.</p>
                 <a href="tel:+60166785404" className="btn btn-primary" style={{ justifyContent: 'center', width: '100%' }}>Call Now</a>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

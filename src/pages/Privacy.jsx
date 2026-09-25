@@ -1,8 +1,9 @@
 import { contactInfo } from '../data/services'
+import Reveal from '../components/Reveal'
 
 export default function Privacy() {
   return (
-    <section className="section" style={{ paddingTop: 120 }}>
+    <Reveal as="section" className="section" style={{ paddingTop: 120 }}>
       <div className="container" style={{ maxWidth: 780, margin: '0 auto' }}>
         <div className="section-title">Privacy Policy</div>
         <p className="section-subtitle" style={{ marginBottom: 32 }}>Last updated: {new Date().getFullYear()}</p>
@@ -26,6 +27,6 @@ export default function Privacy() {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

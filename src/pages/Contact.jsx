@@ -1,5 +1,6 @@
 import ContactForm from '../components/ContactForm'
 import { contactInfo } from '../data/services'
+import Reveal from '../components/Reveal'
 import './Contact.css'
 
 export default function Contact() {
@@ -7,7 +8,7 @@ export default function Contact() {
     <section className="section" style={{ paddingTop: 120 }}>
       <div className="container">
         <div className="contact-layout">
-          <div className="contact-info">
+          <Reveal className="contact-info" direction="left">
             <div className="section-title" style={{ marginBottom: 12 }}>Contact Us</div>
             <p className="section-subtitle" style={{ marginBottom: 32 }}>
               We are available 7 days a week for both emergency services and scheduled appointments.
@@ -49,11 +50,11 @@ export default function Contact() {
               <img src="/images/service-van.avif" alt="KL Plumber service van" className="contact-van-img" />
               <p className="contact-van-caption">We bring the workshop to you — fully equipped and ready to serve.</p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="contact-form-wrapper">
+          <Reveal className="contact-form-wrapper" direction="right">
             <ContactForm />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

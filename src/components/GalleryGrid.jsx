@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Reveal from './Reveal'
+import { staggerDelay, sideFor } from '../utils/reveal'
 import './GalleryGrid.css'
 
 const galleryImages = [
@@ -40,10 +42,10 @@ export default function GalleryGrid() {
       </div>
       <div className="gallery-grid">
         {filtered.map((img, i) => (
-          <div key={i} className="gallery-item">
+          <Reveal key={img.src} className="gallery-item" direction={sideFor(i)} delay={staggerDelay(i)}>
             <img src={img.src} alt={img.alt} className="gallery-img" loading="lazy" />
             <span className="gallery-item-tag">{img.category}</span>
-          </div>
+          </Reveal>
         ))}
       </div>
     </div>

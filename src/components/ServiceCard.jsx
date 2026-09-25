@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Reveal from './Reveal'
 import './ServiceCard.css'
 
 const serviceImages = {
@@ -31,12 +32,14 @@ const icons = {
   flooring: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>,
 }
 
-export default function ServiceCard({ service, revealClass = '', revealDelay = 0 }) {
+export default function ServiceCard({ service, revealDirection, revealDelay = 0 }) {
   return (
-    <Link
+    <Reveal
+      as={Link}
       to={`/services/${service.slug}`}
-      className={`service-card ${revealClass}`}
-      style={revealDelay ? { transitionDelay: `${revealDelay}s` } : undefined}
+      className="service-card"
+      direction={revealDirection}
+      delay={revealDelay}
     >
       <div className="service-card-media">
         <div
@@ -53,6 +56,6 @@ export default function ServiceCard({ service, revealClass = '', revealDelay = 0
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </span>
       </div>
-    </Link>
+    </Reveal>
   )
 }

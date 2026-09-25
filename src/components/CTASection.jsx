@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 import { contactInfo } from '../data/services'
+import Reveal from './Reveal'
 import './CTASection.css'
 
 export default function CTASection() {
   return (
-    <section className="cta-section">
+    <Reveal as="section" className="cta-section">
       <div className="cta-shapes">
         <div className="cta-shape cta-shape-1"></div>
         <div className="cta-shape cta-shape-2"></div>
@@ -23,6 +24,6 @@ export default function CTASection() {
           <Link to="/contact" className="btn btn-dark cta-btn">Book a Service</Link>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

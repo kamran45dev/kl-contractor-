@@ -1,4 +1,6 @@
 import CountUp from './CountUp'
+import Reveal from './Reveal'
+import { staggerDelay, sideFor } from '../utils/reveal'
 import './WhyUs.css'
 
 const stats = [
@@ -34,11 +36,11 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="section whyus">
+    <Reveal as="section" className="section whyus">
       <div className="container">
         <div className="stats-row">
-          {stats.map((s, i) => (
-            <div key={i} className="stat-item">
+          {stats.map((s) => (
+            <div key={s.label} className="stat-item">
               <span className="stat-number"><CountUp value={s.number} /></span>
               <span className="stat-label">{s.label}</span>
             </div>
@@ -53,14 +55,14 @@ export default function WhyUs() {
         </div>
         <div className="whyus-grid">
           {reasons.map((r, i) => (
-            <div key={i} className="whyus-card">
+            <Reveal key={r.title} className="whyus-card" direction={sideFor(i)} delay={staggerDelay(i)}>
               <div className="whyus-icon">{r.icon}</div>
               <h3 className="whyus-title">{r.title}</h3>
               <p className="whyus-desc">{r.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

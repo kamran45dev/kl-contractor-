@@ -1,5 +1,6 @@
 import { services } from '../data/services'
 import ServiceCard from './ServiceCard'
+import { staggerDelay, sideFor } from '../utils/reveal'
 import './ServiceCard.css'
 
 export default function ServicesGrid({ limit }) {
@@ -11,8 +12,8 @@ export default function ServicesGrid({ limit }) {
         <ServiceCard
           key={service.id}
           service={service}
-          revealClass={`reveal ${i % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}
-          revealDelay={(i % 3) * 0.12}
+          revealDirection={sideFor(i)}
+          revealDelay={staggerDelay(i)}
         />
       ))}
     </div>

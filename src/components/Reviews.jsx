@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+import { staggerDelay, sideFor } from '../utils/reveal'
 import './Reviews.css'
 
 const testimonials = [
@@ -25,7 +27,7 @@ const testimonials = [
 
 export default function Reviews() {
   return (
-    <section className="section section-alt">
+    <Reveal as="section" className="section section-alt">
       <div className="container">
         <div className="section-title" style={{ textAlign: 'center' }}>What Our Clients Say</div>
         <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
@@ -33,7 +35,7 @@ export default function Reviews() {
         </p>
         <div className="reviews-grid">
           {testimonials.map((t, i) => (
-            <div key={i} className="review-card">
+            <Reveal key={t.name} className="review-card" direction={sideFor(i)} delay={staggerDelay(i)}>
               <div className="review-stars">
                 {Array.from({ length: 5 }, (_, j) => (
                   <span key={j} className={`star ${j < t.rating ? 'filled' : ''}`}>★</span>
@@ -41,10 +43,10 @@ export default function Reviews() {
               </div>
               <p className="review-text">"{t.text}"</p>
               <p className="review-name">{t.name}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

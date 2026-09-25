@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+import { staggerDelay, sideFor } from '../utils/reveal'
 import './HowItWorks.css'
 
 const steps = [
@@ -10,7 +12,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="section how-it-works">
+    <Reveal as="section" className="section how-it-works">
       <div className="container">
         <div className="section-header">
           <span className="section-tag">Our Process</span>
@@ -22,12 +24,17 @@ export default function HowItWorks() {
 
         <div className="how-it-works-grid">
           {steps.map((step, i) => (
-            <div key={i} className="how-it-works-card">
+            <Reveal
+              key={step.src}
+              className="how-it-works-card"
+              direction={sideFor(i)}
+              delay={staggerDelay(i)}
+            >
               <img src={step.src} alt={step.alt} loading="lazy" />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

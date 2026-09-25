@@ -1,8 +1,9 @@
 import ServicesGrid from '../components/ServicesGrid'
+import Reveal from '../components/Reveal'
 
 export default function Services() {
   return (
-    <section className="section section-alt reveal" style={{ paddingTop: 120 }}>
+    <Reveal as="section" className="section section-alt" style={{ paddingTop: 120 }}>
       <div className="container">
         <div className="section-title">All Services</div>
         <p className="section-subtitle">
@@ -10,6 +11,6 @@ export default function Services() {
         </p>
         <ServicesGrid />
       </div>
-    </section>
+    </Reveal>
   )
 }
