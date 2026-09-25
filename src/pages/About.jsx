@@ -36,7 +36,7 @@ export default function About() {
                   <span className="stat-label">Star Rating</span>
                 </div>
                 <div className="about-stat">
-                  <span className="stat-number"><CountUp value="6+" /></span>
+                  <span className="stat-number"><CountUp value="10+" /></span>
                   <span className="stat-label">Years Experience</span>
                 </div>
                 <div className="about-stat">
