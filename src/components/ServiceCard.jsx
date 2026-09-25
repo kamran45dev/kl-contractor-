@@ -31,9 +31,13 @@ const icons = {
   flooring: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>,
 }
 
-export default function ServiceCard({ service, revealClass = '' }) {
+export default function ServiceCard({ service, revealClass = '', revealDelay = 0 }) {
   return (
-    <Link to={`/services/${service.slug}`} className={`service-card ${revealClass}`}>
+    <Link
+      to={`/services/${service.slug}`}
+      className={`service-card ${revealClass}`}
+      style={revealDelay ? { transitionDelay: `${revealDelay}s` } : undefined}
+    >
       <div className="service-card-media">
         <div
           className="service-card-image"

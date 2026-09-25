@@ -67,6 +67,7 @@
   letter-spacing: -2px;
   color: var(--white);
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  min-height: 4.4em;
 }
 
 .hero-rotate-wrap {

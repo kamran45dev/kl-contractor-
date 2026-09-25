@@ -12,6 +12,7 @@ export default function ServicesGrid({ limit }) {
           key={service.id}
           service={service}
           revealClass={`reveal ${i % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}
+          revealDelay={(i % 3) * 0.12}
         />
       ))}
     </div>
