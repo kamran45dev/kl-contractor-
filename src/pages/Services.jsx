@@ -2,7 +2,7 @@ import ServicesGrid from '../components/ServicesGrid'
 
 export default function Services() {
   return (
-    <section className="section reveal" style={{ paddingTop: 120 }}>
+    <section className="section section-alt reveal" style={{ paddingTop: 120 }}>
       <div className="container">
         <div className="section-title">All Services</div>
         <p className="section-subtitle">

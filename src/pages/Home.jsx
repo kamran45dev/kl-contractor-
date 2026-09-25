@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="reveal"><HowItWorks /></div>
 
-      <section className="section reveal">
+      <section className="section section-alt reveal">
         <div className="container">
           <div className="section-title" style={{ textAlign: 'center' }}>Our Services</div>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>

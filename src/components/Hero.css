@@ -33,15 +33,17 @@
   align-items: center;
   gap: 8px;
   padding: 8px 18px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(6, 20, 33, 0.55);
   color: var(--white);
   border-radius: var(--radius-pill);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hero-tag-dot {
