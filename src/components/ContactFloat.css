@@ -3,10 +3,6 @@
   bottom: 28px;
   right: 28px;
   z-index: 99;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 14px;
   transition: bottom 0.25s ease;
 }
 
@@ -14,70 +10,24 @@
   bottom: 108px;
 }
 
-.contact-float-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 24px;
-  border-radius: 50px;
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: slide-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  white-space: nowrap;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-float-option.whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
-}
-
-.contact-float-option.call {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-  color: var(--primary);
-}
-
-.contact-float-option:hover {
-  transform: scale(1.06) translateX(-4px);
-}
-
-.contact-float-option:active {
-  transform: scale(0.96);
-}
-
 .contact-float-main {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-  color: var(--primary);
+  background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+  color: white;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 28px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
   transition: var(--transition);
-  position: relative;
 }
 
 .contact-float-main:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 36px rgba(14, 165, 233, 0.5);
-}
-
-.contact-float.active .contact-float-main {
-  background: var(--primary);
-  color: var(--text-on-dark);
-  box-shadow: 0 6px 28px rgba(12, 74, 110, 0.3);
-  transform: rotate(90deg);
-}
-
-.contact-float.active .contact-float-main:hover {
-  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 8px 36px rgba(37, 211, 102, 0.55);
 }
 
 @media (max-width: 768px) {
@@ -88,16 +38,5 @@
 
   .contact-float.raised {
     bottom: 158px;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(30px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
   }
 }
