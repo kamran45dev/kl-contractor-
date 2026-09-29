@@ -1,0 +1,29 @@
+# KL Plumber
+
+> KL Plumber is a licensed, SSM-registered plumbing and home services company serving Kuala Lumpur and Selangor, Malaysia. We provide 24/7 emergency plumbing, pipe repair, drain cleaning, water heater installation, waterproofing, kitchen renovation, house painting, and flooring services for residential and commercial customers.
+
+Contact: +60 16-678 5404 (also available on WhatsApp). Based in Kuala Lumpur, Wilayah Persekutuan, Malaysia.
+
+## Services
+
+- [Emergency Plumbing](https://www.kl-plumber.com/services/emergency-plumbing): 24/7 fast-response plumbing for burst pipes, water leaks, blocked drains, and overflowing toilets.
+- [Pipe Repair & Replacement](https://www.kl-plumber.com/services/pipe-repair-replacement): PPR, PVC, and copper pipe repair and replacement, including hidden pipe fixing.
+- [Toilet Repair & Installation](https://www.kl-plumber.com/services/toilet-repair-installation): Toilet bowl repair, flush system replacement, and installation.
+- [Drain Cleaning & Unclogging](https://www.kl-plumber.com/services/drain-cleaning): Blocked drain clearing and high-pressure water jetting.
+- [Water Pressure Fixing](https://www.kl-plumber.com/services/water-pressure): Diagnosis and repair of low or inconsistent water pressure.
+- [Water Heater Installation & Repair](https://www.kl-plumber.com/services/water-heater): Electric, gas, and solar water heater installation and repair.
+- [Booster Pump Installation](https://www.kl-plumber.com/services/booster-pump): Booster pump installation for consistent water flow.
+- [Waterproofing Services](https://www.kl-plumber.com/services/waterproofing): Waterproofing for toilets, rooftops, balconies, and concrete slabs.
+- [Sink, Basin & Shower Installation](https://www.kl-plumber.com/services/sink-basin-shower): Installation and repair of sinks, basins, and showers.
+- [Kitchen Renovation](https://www.kl-plumber.com/services/kitchen-renovation): Full kitchen renovation for homes and businesses.
+- [House Painting](https://www.kl-plumber.com/services/house-painting): Interior and exterior painting services.
+- [Flooring Services](https://www.kl-plumber.com/services/flooring-services): Tile, vinyl, laminate, and wooden flooring installation.
+
+## Company
+
+- [About Us](https://www.kl-plumber.com/about): Company background, licensing, and team information.
+- [Gallery](https://www.kl-plumber.com/gallery): Photos of completed plumbing and renovation projects.
+- [Reviews](https://www.kl-plumber.com/reviews): Customer testimonials and Google review rating.
+- [FAQ](https://www.kl-plumber.com/faq): Frequently asked questions about service area, pricing, and response times.
+- [Contact](https://www.kl-plumber.com/contact): Phone, WhatsApp, and service request form.
+- [Areas We Serve](https://www.kl-plumber.com/areas): Kuala Lumpur, Mont Kiara, Damansara, Sentul, Kepong, Petaling Jaya, Subang Jaya, Shah Alam, Puchong, Ampang, and Bukit Jalil.
