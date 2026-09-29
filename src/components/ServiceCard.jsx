@@ -3,12 +3,12 @@ import Reveal from './Reveal'
 import './ServiceCard.css'
 
 const serviceImages = {
-  'emergency-plumbing': '/images/emergency.webp',
-  'pipe-repair-replacement': '/images/pipe-repair.avif',
-  'toilet-repair-installation': '/images/toilet-repair.jpg',
-  'drain-cleaning': '/images/drain-cleaning.jpg',
-  'water-pressure': '/images/pipe-repair.avif',
-  'water-heater': '/images/water-heater.webp',
+  'emergency-plumbing': '/images/service-emergency-plumbing.jpg',
+  'pipe-repair-replacement': '/images/service-pipe-repair.jpg',
+  'toilet-repair-installation': '/images/service-toilet-repair.jpg',
+  'drain-cleaning': '/images/service-drain-cleaning.jpg',
+  'water-pressure': '/images/service-water-pressure.jpg',
+  'water-heater': '/images/service-water-heater.jpg',
   'booster-pump': '/images/booster-pump.webp',
   'waterproofing': '/images/waterproofing.jpg',
   'sink-basin-shower': '/images/sink-shower.jpg',
