@@ -29,7 +29,7 @@ export default function Reviews() {
   return (
     <Reveal as="section" className="section section-alt">
       <div className="container">
-        <div className="section-title" style={{ textAlign: 'center' }}>What Our Clients Say</div>
+        <h2 className="section-title" style={{ textAlign: 'center' }}>What Our Clients Say</h2>
         <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
           Rated 4.8 stars from 157 reviews on Google. Here is what our customers have to say.
         </p>

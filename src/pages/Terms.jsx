@@ -5,7 +5,7 @@ export default function Terms() {
   return (
     <Reveal as="section" className="section" style={{ paddingTop: 120 }}>
       <div className="container" style={{ maxWidth: 780, margin: '0 auto' }}>
-        <div className="section-title">Terms of Service</div>
+        <h1 className="section-title">Terms of Service</h1>
         <p className="section-subtitle" style={{ marginBottom: 32 }}>Last updated: {new Date().getFullYear()}</p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24, color: 'var(--text-light)', lineHeight: 1.8 }}>

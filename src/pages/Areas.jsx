@@ -6,7 +6,7 @@ export default function Areas() {
   return (
     <Reveal as="section" className="section" style={{ paddingTop: 120 }}>
       <div className="container">
-        <div className="section-title">Areas We Serve</div>
+        <h1 className="section-title">Areas We Serve</h1>
         <p className="section-subtitle">
           Proudly serving homes and businesses across Kuala Lumpur and surrounding areas.
         </p>

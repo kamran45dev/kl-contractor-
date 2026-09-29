@@ -20,7 +20,7 @@ export default function About() {
         <div className="container">
           <div className="about-layout">
             <Reveal className="about-content" direction="left">
-              <div className="section-title">About KL Plumber</div>
+              <h1 className="section-title">About KL Plumber</h1>
               <p className="section-subtitle" style={{ marginBottom: 24 }}>
                 Your trusted partner for home and commercial services in Kuala Lumpur.
               </p>
@@ -64,7 +64,7 @@ export default function About() {
 
       <Reveal as="section" className="section section-alt">
         <div className="container">
-          <div className="section-title" style={{ textAlign: 'center' }}>Why Trust Us?</div>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Why Trust Us?</h2>
           <div className="trust-grid">
             {trustItems.map((item, i) => (
               <Reveal key={item.title} className="trust-item" direction={sideFor(i)} delay={staggerDelay(i)}>
@@ -93,7 +93,7 @@ export default function About() {
 
       <Reveal as="section" className="section">
         <div className="container" style={{ textAlign: 'center' }}>
-          <div className="section-title" style={{ textAlign: 'center' }}>Get In Touch</div>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Get In Touch</h2>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 32px' }}>
             Ready to get started? Contact us today for a free consultation.
           </p>

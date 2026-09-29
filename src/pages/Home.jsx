@@ -17,7 +17,7 @@ export default function Home() {
 
       <Reveal as="section" className="section section-alt">
         <div className="container">
-          <div className="section-title" style={{ textAlign: 'center' }}>Our Services</div>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Our Services</h2>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
             We specialize in all types of home and commercial services in Kuala Lumpur.
           </p>

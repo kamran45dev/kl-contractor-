@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-layout">
           <Reveal className="contact-info" direction="left">
-            <div className="section-title" style={{ marginBottom: 12 }}>Contact Us</div>
+            <h1 className="section-title" style={{ marginBottom: 12 }}>Contact Us</h1>
             <p className="section-subtitle" style={{ marginBottom: 32 }}>
               We are available 7 days a week for both emergency services and scheduled appointments.
             </p>

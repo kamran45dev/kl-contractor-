@@ -56,10 +56,13 @@ export default function ServiceCard({ service, revealDirection, revealDelay = 0 
           </span>
         </button>
         <div className="service-card-body">
-          <h3 className="service-card-title">{service.title}</h3>
+          <h2 className="service-card-title">{service.title}</h2>
           <p className="service-card-desc">{service.shortDesc}</p>
-          <Link to={`/services/${service.slug}`} className="service-card-link">
-            Learn More
+          <Link
+            to={`/services/${service.slug}`}
+            className="service-card-link"
+          >
+            Learn More<span className="sr-only"> about {service.title}</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </Link>
         </div>

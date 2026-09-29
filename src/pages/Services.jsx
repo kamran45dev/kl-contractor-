@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <Reveal as="section" className="section section-alt" style={{ paddingTop: 120 }}>
       <div className="container">
-        <div className="section-title">All Services</div>
+        <h1 className="section-title">All Services</h1>
         <p className="section-subtitle">
           We offer a complete range of home and commercial services in Kuala Lumpur.
         </p>

@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Services</h4>
+          <h2 className="footer-col-title">Services</h2>
           <ul>
             <li><Link to="/services/emergency-plumbing">Emergency Plumbing</Link></li>
             <li><Link to="/services/pipe-repair-replacement">Pipe Repair</Link></li>
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Company</h4>
+          <h2 className="footer-col-title">Company</h2>
           <ul>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Contact</h4>
+          <h2 className="footer-col-title">Contact</h2>
           <ul className="footer-contact">
             <li>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>

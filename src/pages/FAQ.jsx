@@ -54,7 +54,7 @@ export default function FAQ() {
     <>
       <Reveal as="section" className="section" style={{ paddingTop: 120 }}>
         <div className="container">
-          <div className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</div>
+          <h1 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h1>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 48px' }}>
             Answers to the questions we get asked most about our plumbing and home services.
           </p>
