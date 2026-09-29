@@ -9,7 +9,7 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.com.my; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google.com https://www.google.com.my https://googleads.g.doubleclick.net https://www.google-analytics.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.com.my; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+          "value": "default-src 'self'; script-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.doubleclick.net https://www.google.com https://www.google.com.my; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google.com https://www.google.com.my https://*.doubleclick.net https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.googletagmanager.com https://*.google-analytics.com https://*.doubleclick.net https://www.google.com https://www.google.com.my; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
         }
       ]
     }
