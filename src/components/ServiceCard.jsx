@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
 import './ServiceCard.css'
@@ -33,29 +34,50 @@ const icons = {
 }
 
 export default function ServiceCard({ service, revealDirection, revealDelay = 0 }) {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const image = serviceImages[service.slug]
+
   return (
-    <Reveal
-      as={Link}
-      to={`/services/${service.slug}`}
-      className="service-card"
-      direction={revealDirection}
-      delay={revealDelay}
-    >
-      <div className="service-card-media">
-        <div
-          className="service-card-image"
-          style={{ backgroundImage: `url(${serviceImages[service.slug]})` }}
-        />
-        <div className="service-card-icon">{icons[service.icon]}</div>
-      </div>
-      <div className="service-card-body">
-        <h3 className="service-card-title">{service.title}</h3>
-        <p className="service-card-desc">{service.shortDesc}</p>
-        <span className="service-card-link">
-          Learn More
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </div>
-    </Reveal>
+    <>
+      <Reveal className="service-card" direction={revealDirection} delay={revealDelay}>
+        <button
+          type="button"
+          className="service-card-media"
+          onClick={() => setLightboxOpen(true)}
+          aria-label={`View ${service.title} photo`}
+        >
+          <div
+            className="service-card-image"
+            style={{ backgroundImage: `url(${image})` }}
+          />
+          <div className="service-card-icon">{icons[service.icon]}</div>
+          <span className="service-card-zoom">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+          </span>
+        </button>
+        <div className="service-card-body">
+          <h3 className="service-card-title">{service.title}</h3>
+          <p className="service-card-desc">{service.shortDesc}</p>
+          <Link to={`/services/${service.slug}`} className="service-card-link">
+            Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </Link>
+        </div>
+      </Reveal>
+
+      {lightboxOpen && (
+        <div className="image-lightbox" onClick={() => setLightboxOpen(false)}>
+          <button
+            type="button"
+            className="image-lightbox-close"
+            onClick={() => setLightboxOpen(false)}
+            aria-label="Close"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <img src={image} alt={service.title} className="image-lightbox-img" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
+    </>
   )
 }
