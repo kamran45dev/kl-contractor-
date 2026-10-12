@@ -2,15 +2,19 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'AW-18326130382');
+gtag('config', 'AW-18505451192');
 
-// Count calls and WhatsApp chats as Google Ads conversions
+// Count calls and WhatsApp chats as Google Ads conversions.
+// Set CONVERSION_LABEL to the label from the account's event snippet
+// ('send_to': 'AW-18505451192/<label>'); no events are sent while it is empty.
+var CONVERSION_LABEL = '';
 document.addEventListener('click', function (e) {
+  if (!CONVERSION_LABEL) return;
   var link = e.target.closest && e.target.closest('a[href]');
   if (!link) return;
   var href = link.getAttribute('href') || '';
   if (href.indexOf('tel:') === 0 || href.indexOf('wa.me') !== -1) {
-    gtag('event', 'conversion', { send_to: 'AW-18326130382/j5rzCIW12NMcEM6dyqJE' });
+    gtag('event', 'conversion', { send_to: 'AW-18505451192/' + CONVERSION_LABEL });
   }
 }, true);
 
