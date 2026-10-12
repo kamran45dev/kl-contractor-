@@ -7,14 +7,18 @@ gtag('config', 'AW-18505451192');
 // Count calls and WhatsApp chats as Google Ads conversions.
 // Set CONVERSION_LABEL to the label from the account's event snippet
 // ('send_to': 'AW-18505451192/<label>'); no events are sent while it is empty.
-var CONVERSION_LABEL = '';
+var CONVERSION_LABEL = 'UlliCM7hgZodELiNi_hE';
 document.addEventListener('click', function (e) {
   if (!CONVERSION_LABEL) return;
   var link = e.target.closest && e.target.closest('a[href]');
   if (!link) return;
   var href = link.getAttribute('href') || '';
   if (href.indexOf('tel:') === 0 || href.indexOf('wa.me') !== -1) {
-    gtag('event', 'conversion', { send_to: 'AW-18505451192/' + CONVERSION_LABEL });
+    gtag('event', 'conversion', {
+      send_to: 'AW-18505451192/' + CONVERSION_LABEL,
+      value: 1.0,
+      currency: 'MYR'
+    });
   }
 }, true);
 
