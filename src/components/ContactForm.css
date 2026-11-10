@@ -61,6 +61,29 @@
   min-height: 100px;
 }
 
+.form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-error {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-form button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 @media (max-width: 600px) {
   .contact-form {
     padding: 24px;

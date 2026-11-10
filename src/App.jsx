@@ -12,6 +12,7 @@ import FAQ from './pages/FAQ'
 import Testimonials from './pages/Testimonials'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
+import ThankYou from './pages/ThankYou'
 import './styles/global.css'
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="reviews" element={<Testimonials />} />
           <Route path="privacy-policy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
+          <Route path="thank-you" element={<ThankYou />} />
         </Route>
       </Routes>
     </BrowserRouter>

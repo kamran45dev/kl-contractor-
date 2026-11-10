@@ -1,0 +1,36 @@
+.thankyou-box {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thankyou-icon {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--accent);
+}
+
+.thankyou-box .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thankyou-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin: 32px 0 20px;
+}
+
+.thankyou-home {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+}
