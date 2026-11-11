@@ -1,8 +1,4 @@
-// Google tag (gtag.js) bootstrap
-window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18505451192');
+// The Google tag itself (gtag.js and the config call) is in the <head> of index.html.
 
 // Count calls and WhatsApp chats as Google Ads conversions.
 // Set CONVERSION_LABEL to the label from the account's event snippet
