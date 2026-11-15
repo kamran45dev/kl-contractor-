@@ -16,9 +16,9 @@ import Terms from './pages/Terms'
 import NotFound from './pages/NotFound'
 import './styles/global.css'
 
-export default function App() {
+export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <RouteSeo />
       <Routes>
@@ -37,6 +37,14 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   )
 }

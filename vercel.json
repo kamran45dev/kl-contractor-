@@ -1,14 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/:path(services|gallery|about|contact|areas|faq|reviews|privacy-policy|terms)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/services/:slug(emergency-plumbing|pipe-repair-replacement|toilet-repair-installation|drain-cleaning|water-pressure|water-heater|booster-pump|waterproofing|sink-basin-shower|kitchen-renovation|house-painting|flooring-services)",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -31,5 +21,6 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true
 }
