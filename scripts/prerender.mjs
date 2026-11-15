@@ -5,6 +5,7 @@ import { dirname, join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { pages, metaFor, SITE } from '../src/seo.js'
 import { services } from '../src/data/services.js'
+import { areaPages } from '../src/data/areaPages.js'
 
 const dist = resolve('dist')
 const serverDir = resolve('dist-server')
@@ -13,7 +14,7 @@ const { render } = await import(pathToFileURL(join(serverDir, 'entry-server.js')
 
 const esc = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 
-const routes = [...Object.keys(pages), ...services.map(s => `/services/${s.slug}`)]
+const routes = [...Object.keys(pages), ...services.map(s => `/services/${s.slug}`), ...areaPages.map(a => `/areas/${a.slug}`)]
 
 for (const route of routes) {
   const m = metaFor(route)

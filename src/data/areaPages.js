@@ -1,0 +1,136 @@
+// Content for the /areas/<slug> pages. Kept factual and general: no response-time or
+// coverage promises beyond what the business already states on the rest of the site.
+export const areaPages = [
+  {
+    slug: 'mont-kiara',
+    name: 'Mont Kiara',
+    intro: 'Mont Kiara is full of high-rise condominiums and serviced apartments, where plumbing problems often involve shared risers, concealed pipes and water pressure on upper floors.',
+    homes: 'Condominiums, serviced apartments and a few landed homes',
+    issues: [
+      'Low water pressure on higher floors, often fixed with a booster pump or pressure check',
+      'Concealed pipe leaks behind walls and ceilings that cause damp patches for neighbours below',
+      'Water heater and shower mixer faults in apartment bathrooms',
+      'Slow or blocked kitchen sinks and floor traps',
+    ],
+    nearby: ['damansara', 'sentul', 'kepong'],
+  },
+  {
+    slug: 'damansara',
+    name: 'Damansara',
+    intro: 'Damansara covers a wide mix of landed houses, condominiums and shop offices, so we handle everything from a leaking tap at home to plumbing repairs in a shop unit.',
+    homes: 'Landed houses, condominiums and commercial shop lots',
+    issues: [
+      'Leaking or burst water pipes in older landed houses',
+      'Blocked drains and floor traps in kitchens and bathrooms',
+      'Toilet flush and cistern faults',
+      'Water heater repair and replacement',
+    ],
+    nearby: ['mont-kiara', 'petaling-jaya', 'kepong'],
+  },
+  {
+    slug: 'sentul',
+    name: 'Sentul',
+    intro: 'Sentul has older terrace houses alongside newer condominium developments. Older pipes tend to corrode and clog, while newer buildings have their own pressure and heater issues.',
+    homes: 'Older terrace houses and newer condominiums',
+    issues: [
+      'Ageing water pipes that leak or give discoloured water',
+      'Blocked main drains and slow-flowing sinks',
+      'Leaking taps, basin mixers and shower heads',
+      'Low water pressure and pump problems',
+    ],
+    nearby: ['kepong', 'mont-kiara', 'ampang'],
+  },
+  {
+    slug: 'kepong',
+    name: 'Kepong',
+    intro: 'Kepong is a long-established neighbourhood with many terrace and semi-detached homes. After years of use, pipe corrosion and drain buildup are the problems we see most.',
+    homes: 'Terrace and semi-detached houses, plus some low-rise flats',
+    issues: [
+      'Corroded or leaking water pipes, including hidden pipework',
+      'Blocked kitchen and bathroom drains, and grease buildup',
+      'Overflowing or poorly flushing toilets',
+      'Water pump and tank float valve faults',
+    ],
+    nearby: ['sentul', 'damansara', 'mont-kiara'],
+  },
+  {
+    slug: 'petaling-jaya',
+    name: 'Petaling Jaya',
+    intro: 'Petaling Jaya is a mature suburb with many older homes and apartments, so repairs, pipe replacement and upgrades come up often alongside emergency leaks.',
+    homes: 'Older landed homes, apartments and shop offices',
+    issues: [
+      'Pipe replacement in older houses, including concealed pipes',
+      'Water leaks from ceilings, walls and bathrooms',
+      'Blocked drains, sewage and floor traps',
+      'Water heater, tap and toilet repair',
+    ],
+    nearby: ['subang-jaya', 'damansara', 'shah-alam'],
+  },
+  {
+    slug: 'subang-jaya',
+    name: 'Subang Jaya',
+    intro: 'Subang Jaya has a large number of terrace homes and apartments. Families here usually call us for drain blockages, leaking taps and water heaters that stop working.',
+    homes: 'Terrace houses, apartments and condominiums',
+    issues: [
+      'Water heater not heating or tripping the power',
+      'Blocked kitchen sinks and bathroom drains',
+      'Leaking taps, pipes and shower fittings',
+      'Toilet repair and replacement',
+    ],
+    nearby: ['petaling-jaya', 'shah-alam', 'puchong'],
+  },
+  {
+    slug: 'shah-alam',
+    name: 'Shah Alam',
+    intro: 'Shah Alam is a large planned city with many landed homes and housing estates. Bigger houses often mean longer pipe runs, water pumps and storage tanks that need regular attention.',
+    homes: 'Landed houses in housing estates, plus apartments',
+    issues: [
+      'Water pump and booster pump repair or installation',
+      'Water tank leaks, overflow and float valve faults',
+      'Long pipe runs with hidden leaks',
+      'Blocked drains and sewage line problems',
+    ],
+    nearby: ['subang-jaya', 'petaling-jaya', 'puchong'],
+  },
+  {
+    slug: 'puchong',
+    name: 'Puchong',
+    intro: 'Puchong has grown quickly, with many condominiums, townhouses and shop lots. Plumbing work here ranges from new fittings to repairs on fast-aging developments.',
+    homes: 'Condominiums, townhouses and commercial shop lots',
+    issues: [
+      'Low water pressure and booster pump issues',
+      'Leaks from bathrooms and concealed pipes',
+      'Blocked drains in kitchens and shop units',
+      'Toilet, basin and tap installation or replacement',
+    ],
+    nearby: ['subang-jaya', 'bukit-jalil', 'shah-alam'],
+  },
+  {
+    slug: 'ampang',
+    name: 'Ampang',
+    intro: 'Ampang combines older bungalows and terrace homes with high-rise condominiums. Older properties need pipe repairs and drain clearing, while condos need pressure and heater help.',
+    homes: 'Bungalows, terrace houses and condominiums',
+    issues: [
+      'Leaking and corroded pipes in older homes',
+      'Blocked drains and floor traps',
+      'Water heater and shower repair',
+      'Low water pressure and pump faults',
+    ],
+    nearby: ['sentul', 'bukit-jalil', 'mont-kiara'],
+  },
+  {
+    slug: 'bukit-jalil',
+    name: 'Bukit Jalil',
+    intro: 'Bukit Jalil is mostly newer condominium and apartment developments. New buildings still have plumbing faults such as leaking fittings, weak pressure and heater problems.',
+    homes: 'Newer condominiums and apartments',
+    issues: [
+      'Leaking fittings, taps and toilet connections',
+      'Weak water pressure and booster pump setup',
+      'Water heater installation and repair',
+      'Blocked sinks, floor traps and bathroom drains',
+    ],
+    nearby: ['puchong', 'ampang', 'subang-jaya'],
+  },
+]
+
+export const areaBySlug = Object.fromEntries(areaPages.map(a => [a.slug, a]))

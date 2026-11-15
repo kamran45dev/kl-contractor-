@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom'
 import { areas } from '../data/services'
+import { areaPages } from '../data/areaPages'
 import Reveal from '../components/Reveal'
 import { staggerDelay, sideFor } from '../utils/reveal'
+
+const slugFor = name => areaPages.find(a => a.name === name)?.slug
 
 export default function Areas() {
   return (
@@ -37,7 +41,7 @@ export default function Areas() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              {area}
+              {slugFor(area) ? <Link to={`/areas/${slugFor(area)}`} style={{ color: 'inherit' }}>{area}</Link> : area}
             </Reveal>
           ))}
         </div>

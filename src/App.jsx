@@ -9,6 +9,7 @@ import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Areas from './pages/Areas'
+import AreaDetail from './pages/AreaDetail'
 import FAQ from './pages/FAQ'
 import Testimonials from './pages/Testimonials'
 import Privacy from './pages/Privacy'
@@ -30,6 +31,7 @@ export function AppRoutes() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="areas" element={<Areas />} />
+          <Route path="areas/:slug" element={<AreaDetail />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="reviews" element={<Testimonials />} />
           <Route path="privacy-policy" element={<Privacy />} />

@@ -1,4 +1,5 @@
 import { services, contactInfo } from './data/services.js'
+import { areaBySlug } from './data/areaPages.js'
 
 export const SITE = 'https://www.kl-plumber.com'
 const BRAND = 'KL Plumber'
@@ -57,6 +58,15 @@ export function metaFor(pathname) {
         description: clip(`${s.shortDesc} Call ${contactInfo.phone} for a free quote.`, 160),
         path,
       }
+    }
+  }
+  const a = path.match(/^\/areas\/([^/]+)$/)
+  if (a && areaBySlug[a[1]]) {
+    const area = areaBySlug[a[1]]
+    return {
+      title: clip(`Plumber in ${area.name} | ${BRAND}`, 60),
+      description: clip(`Plumber in ${area.name}: leaks, blocked drains, toilets, water heaters and pumps. Call or WhatsApp ${BRAND} on ${contactInfo.phone} for a free quote.`, 160),
+      path,
     }
   }
   return { title: `Page not found | ${BRAND}`, description: 'This page does not exist.', path, noindex: true }
