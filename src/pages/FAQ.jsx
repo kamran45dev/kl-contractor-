@@ -4,36 +4,7 @@ import Reveal from '../components/Reveal'
 import { staggerDelay, sideFor } from '../utils/reveal'
 import './FAQ.css'
 
-const faqs = [
-  {
-    q: 'Do you offer 24/7 emergency plumbing service?',
-    a: 'Yes. Our emergency plumbing team is available 24 hours a day, 7 days a week across Kuala Lumpur and Selangor for burst pipes, leaks, and blocked drains.',
-  },
-  {
-    q: 'Are your plumbers licensed and insured?',
-    a: 'Yes, we are an SSM registered business and all our technicians are licensed and insured, so you can trust the work being done in your home or business.',
-  },
-  {
-    q: 'How fast can you respond to an emergency call?',
-    a: 'For most areas in KL and Selangor, our team can be on-site within 30-60 minutes of your call, depending on traffic and location.',
-  },
-  {
-    q: 'Do you provide a free quote before starting work?',
-    a: 'Yes, we always provide an upfront, obligation-free quote before any work begins. There are no hidden charges.',
-  },
-  {
-    q: 'What areas do you service?',
-    a: 'We cover Kuala Lumpur, Mont Kiara, Damansara, Sentul, Kepong, Petaling Jaya, Subang Jaya, Shah Alam, Puchong, Ampang, and Bukit Jalil.',
-  },
-  {
-    q: 'What services do you offer besides plumbing?',
-    a: 'Beyond plumbing, we offer kitchen renovation, house painting, flooring, and waterproofing services for homes and commercial spaces.',
-  },
-  {
-    q: 'Do you offer any warranty on your work?',
-    a: 'Yes, every job is backed by our satisfaction guarantee. If an issue related to our work arises, we will make it right.',
-  },
-]
+import { faqs } from '../data/faqs'
 
 function FAQItem({ item, isOpen, onClick, direction, delay }) {
   return (

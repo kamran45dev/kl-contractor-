@@ -1,5 +1,8 @@
 import { services, contactInfo } from './data/services.js'
 import { areaBySlug } from './data/areaPages.js'
+import { serviceContent } from './data/serviceContent.js'
+import { areaContent } from './data/areaContent.js'
+import { faqs } from './data/faqs.js'
 
 export const SITE = 'https://www.kl-plumber.com'
 const BRAND = 'KL Plumber'
@@ -70,4 +73,62 @@ export function metaFor(pathname) {
     }
   }
   return { title: `Page not found | ${BRAND}`, description: 'This page does not exist.', path, noindex: true }
+}
+
+const faqPage = items => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+})
+
+const crumb = items => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map(([name, path], i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name,
+    item: SITE + (path === '/' ? '/' : path),
+  })),
+})
+
+// Structured data for a route (besides the site-wide Plumber block in index.html).
+// Returns an array of schema.org objects; empty for pages that do not exist.
+export function schemaFor(pathname) {
+  const m = metaFor(pathname)
+  if (m.noindex) return []
+  const path = m.path
+  const out = []
+  if (path === '/') return out
+  const home = ['Home', '/']
+  const s = path.match(/^\/services\/([^/]+)$/)
+  const a = path.match(/^\/areas\/([^/]+)$/)
+  if (s) {
+    const svc = services.find(x => x.slug === s[1])
+    out.push(crumb([home, ['Services', '/services'], [svc.title, path]]))
+    out.push({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: svc.title,
+      description: svc.shortDesc,
+      url: SITE + path,
+      serviceType: svc.title,
+      areaServed: [{ '@type': 'City', name: 'Kuala Lumpur' }, { '@type': 'AdministrativeArea', name: 'Selangor' }],
+      provider: { '@type': 'Plumber', name: BRAND, url: SITE + '/', telephone: contactInfo.phoneRaw },
+    })
+    const f = serviceContent[svc.slug]?.faqs
+    if (f?.length) out.push(faqPage(f))
+  } else if (a) {
+    const area = areaBySlug[a[1]]
+    out.push(crumb([home, ['Areas', '/areas'], [`Plumber in ${area.name}`, path]]))
+    const f = areaContent[area.slug]?.faqs
+    if (f?.length) out.push(faqPage(f))
+  } else if (path === '/faq') {
+    out.push(crumb([home, ['FAQ', path]]))
+    out.push(faqPage(faqs.filter(f => f.schema)))
+  } else {
+    const name = m.title.split('|')[0].trim()
+    out.push(crumb([home, [name, path]]))
+  }
+  return out
 }

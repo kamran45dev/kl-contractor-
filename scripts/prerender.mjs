@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { pages, metaFor, SITE } from '../src/seo.js'
+import { pages, metaFor, schemaFor, SITE } from '../src/seo.js'
 import { services } from '../src/data/services.js'
 import { areaPages } from '../src/data/areaPages.js'
 
@@ -24,7 +24,8 @@ for (const route of routes) {
     .replace(/<title>[^<]*<\/title>/, `<title>${esc(m.title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/?>/, `<meta name="description" content="${esc(m.description)}" />`)
     .replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`)
-  const og = `    <meta property="og:title" content="${esc(m.title)}" />\n    <meta property="og:description" content="${esc(m.description)}" />\n    <meta property="og:url" content="${url}" />\n  </head>`
+  const ld = schemaFor(route).map(o => `    <script type="application/ld+json" data-route-ld>${JSON.stringify(o).replace(/</g, '\\u003c')}</script>\n`).join('')
+  const og = `    <meta property="og:title" content="${esc(m.title)}" />\n    <meta property="og:description" content="${esc(m.description)}" />\n    <meta property="og:url" content="${url}" />\n${ld}  </head>`
   page = page.replace('</head>', og)
   if (!page.includes('<div id="root"></div>')) throw new Error('root placeholder missing in template')
   page = page.replace('<div id="root"></div>', `<div id="root">${html}</div>`)

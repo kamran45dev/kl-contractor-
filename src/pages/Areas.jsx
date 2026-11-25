@@ -45,6 +45,18 @@ export default function Areas() {
             </Reveal>
           ))}
         </div>
+        <div style={{ marginTop: 40, maxWidth: 760 }}>
+          <h2>Plumbing Help Across KL and Selangor</h2>
+          <p style={{ marginTop: 12 }}>
+            KL Plumber looks after homes, condominiums, shop lots and offices in Kuala Lumpur and nearby parts of Selangor.
+            Select your area above to see the kinds of plumbing problems we usually handle there, from leaking pipes and
+            blocked drains to toilets, water heaters and booster pumps.
+          </p>
+          <p style={{ marginTop: 12 }}>
+            Not sure if we cover your street? Call or WhatsApp us on +60 16-678 5404 and tell us where you are. You can also
+            browse our <Link to="/services">plumbing services</Link> or read the <Link to="/faq">frequently asked questions</Link>.
+          </p>
+        </div>
       </div>
     </Reveal>
   )

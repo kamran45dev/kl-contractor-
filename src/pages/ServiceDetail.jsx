@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { services } from '../data/services'
+import { serviceContent } from '../data/serviceContent'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import './ServiceDetail.css'
@@ -35,6 +36,10 @@ export default function ServiceDetail() {
     )
   }
 
+  const extra = serviceContent[service.slug]
+  const at = services.indexOf(service)
+  const related = [1, 2, 3, 4].map(n => services[(at + n) % services.length])
+
   return (
     <>
       <section
@@ -62,6 +67,53 @@ export default function ServiceDetail() {
             <Reveal className="detail-main" direction="left">
               <h2>About This Service</h2>
               <p>{service.fullDesc}</p>
+              {extra && (
+                <>
+                  <h2 style={{ marginTop: 28 }}>Signs You May Need {service.title}</h2>
+                  <ul className="detail-features">
+                    {extra.signs.map(item => (
+                      <li key={item}>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  {extra.before && (
+                    <>
+                      <h2 style={{ marginTop: 28 }}>What To Do While You Wait</h2>
+                      <ol style={{ paddingLeft: 22, lineHeight: 1.7 }}>
+                        {extra.before.map(item => <li key={item}>{item}</li>)}
+                      </ol>
+                    </>
+                  )}
+                  <h2 style={{ marginTop: 28 }}>How The Job Works</h2>
+                  <ol style={{ paddingLeft: 22, lineHeight: 1.7 }}>
+                    {extra.steps.map(item => <li key={item}>{item}</li>)}
+                  </ol>
+                  <h2 style={{ marginTop: 28 }}>Common Causes</h2>
+                  <ul style={{ paddingLeft: 22, lineHeight: 1.7 }}>
+                    {extra.causes.map(item => <li key={item}>{item}</li>)}
+                  </ul>
+                  <h2 style={{ marginTop: 28 }}>Frequently Asked Questions</h2>
+                  {extra.faqs.map(f => (
+                    <details key={f.q} style={{ margin: '10px 0' }}>
+                      <summary style={{ cursor: 'pointer', fontWeight: 600 }}>{f.q}</summary>
+                      <p style={{ marginTop: 8 }}>{f.a}</p>
+                    </details>
+                  ))}
+                </>
+              )}
+              <h2 style={{ marginTop: 28 }}>Related Services</h2>
+              <p>
+                {related.map((r, i) => (
+                  <span key={r.slug}>
+                    {i > 0 && ', '}
+                    <Link to={`/services/${r.slug}`}>{r.title}</Link>
+                  </span>
+                ))}
+                . See also the{' '}
+                <Link to="/areas">areas we serve</Link> across Kuala Lumpur and Selangor.
+              </p>
             </Reveal>
             <Reveal className="detail-sidebar" direction="right">
               <div className="detail-features-card">

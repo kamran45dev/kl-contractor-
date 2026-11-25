@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { areaBySlug } from '../data/areaPages'
+import { areaContent } from '../data/areaContent'
 import { services, contactInfo } from '../data/services'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
@@ -14,6 +15,7 @@ export default function AreaDetail() {
   if (!area) return <NotFound />
 
   const list = topServices.map(s => services.find(x => x.slug === s)).filter(Boolean)
+  const extra = areaContent[area.slug]
 
   return (
     <>
@@ -51,6 +53,14 @@ export default function AreaDetail() {
                   </li>
                 ))}
               </ul>
+              {extra && (
+                <>
+                  <h2 style={{ marginTop: 28 }}>Plumbing Tips for {area.name} Homes</h2>
+                  <ul style={{ paddingLeft: 22, lineHeight: 1.7 }}>
+                    {extra.tips.map(t => <li key={t}>{t}</li>)}
+                  </ul>
+                </>
+              )}
               <h2 style={{ marginTop: 28 }}>Our Services</h2>
               <ul className="detail-features">
                 {list.map(s => (
@@ -71,6 +81,17 @@ export default function AreaDetail() {
                 ))}
                 , across Kuala Lumpur and Selangor.
               </p>
+              {extra && (
+                <>
+                  <h2 style={{ marginTop: 28 }}>Frequently Asked Questions</h2>
+                  {extra.faqs.map(f => (
+                    <details key={f.q} style={{ margin: '10px 0' }}>
+                      <summary style={{ cursor: 'pointer', fontWeight: 600 }}>{f.q}</summary>
+                      <p style={{ marginTop: 8 }}>{f.a}</p>
+                    </details>
+                  ))}
+                </>
+              )}
             </Reveal>
             <Reveal className="detail-sidebar" direction="right">
               <div className="detail-cta-card">

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { SITE, metaFor } from '../seo'
+import { SITE, metaFor, schemaFor } from '../seo'
 
 function setTag(selector, create, attrs) {
   let el = document.head.querySelector(selector)
@@ -23,6 +23,14 @@ export default function RouteSeo() {
     setTag('meta[property="og:title"]', 'meta', { property: 'og:title', content: m.title })
     setTag('meta[property="og:description"]', 'meta', { property: 'og:description', content: m.description })
     setTag('meta[property="og:url"]', 'meta', { property: 'og:url', content: url })
+    document.head.querySelectorAll('script[data-route-ld]').forEach(el => el.remove())
+    schemaFor(pathname).forEach(obj => {
+      const el = document.createElement('script')
+      el.type = 'application/ld+json'
+      el.setAttribute('data-route-ld', '')
+      el.textContent = JSON.stringify(obj)
+      document.head.appendChild(el)
+    })
   }, [pathname])
   return null
 }
