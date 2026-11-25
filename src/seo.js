@@ -10,7 +10,7 @@ const BRAND = 'KL Plumber'
 export const pages = {
   '/': {
     title: 'KL Plumber | 24/7 Emergency Plumber in Kuala Lumpur',
-    description: 'Trusted plumber in Kuala Lumpur & Selangor. Leaks, blocked drains, toilets, water heaters and pumps fixed fast. Call or WhatsApp for a free quote.',
+    description: 'Trusted plumber in Kuala Lumpur & Selangor. Leaks, blocked drains, toilets, water heaters and pumps fixed fast. Call or WhatsApp for fast help.',
   },
   '/services': {
     title: 'Plumbing Services in Kuala Lumpur | KL Plumber',
@@ -26,7 +26,7 @@ export const pages = {
   },
   '/contact': {
     title: 'Call or WhatsApp a Plumber in KL | KL Plumber',
-    description: 'Need a plumber now? Call or WhatsApp KL Plumber on +60 16-678 5404 for fast help and a free quote in Kuala Lumpur and Selangor.',
+    description: 'Need a plumber now? Call or WhatsApp KL Plumber on +60 16-678 5404 for fast help in Kuala Lumpur and Selangor.',
   },
   '/areas': {
     title: 'Plumber Service Areas in KL & Selangor | KL Plumber',
@@ -58,7 +58,7 @@ export function metaFor(pathname) {
     if (s) {
       return {
         title: clip(`${s.title} in KL | ${BRAND}`, 60),
-        description: clip(`${s.shortDesc} Call ${contactInfo.phone} for a free quote.`, 160),
+        description: clip(`${s.shortDesc} Call ${contactInfo.phone} to book.`, 160),
         path,
       }
     }
@@ -68,7 +68,7 @@ export function metaFor(pathname) {
     const area = areaBySlug[a[1]]
     return {
       title: clip(`Plumber in ${area.name} | ${BRAND}`, 60),
-      description: clip(`Plumber in ${area.name}: leaks, blocked drains, toilets, water heaters and pumps. Call or WhatsApp ${BRAND} on ${contactInfo.phone} for a free quote.`, 160),
+      description: clip(`Plumber in ${area.name}: leaks, blocked drains, toilets, water heaters and pumps. Call or WhatsApp ${BRAND} on ${contactInfo.phone}.`, 160),
       path,
     }
   }

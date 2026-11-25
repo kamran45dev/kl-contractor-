@@ -95,7 +95,7 @@ export default function About() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Get In Touch</h2>
           <p className="section-subtitle" style={{ textAlign: 'center', margin: '0 auto 32px' }}>
-            Ready to get started? Contact us today for a free consultation.
+            Ready to get started? Contact us today.
           </p>
           <div className="about-contact-methods">
             <div className="about-contact-card">

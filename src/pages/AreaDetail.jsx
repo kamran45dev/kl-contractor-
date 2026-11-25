@@ -96,7 +96,7 @@ export default function AreaDetail() {
             <Reveal className="detail-sidebar" direction="right">
               <div className="detail-cta-card">
                 <h3>Need a Plumber in {area.name}?</h3>
-                <p>Call or WhatsApp us for a free quote.</p>
+                <p>Call or WhatsApp us to talk through the problem.</p>
                 <a href={`tel:${contactInfo.phoneRaw}`} className="btn btn-call" style={{ justifyContent: 'center', width: '100%' }}>Call {contactInfo.phone}</a>
                 <a href={contactInfo.whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ justifyContent: 'center', width: '100%', marginTop: 10 }}>WhatsApp Us</a>
               </div>

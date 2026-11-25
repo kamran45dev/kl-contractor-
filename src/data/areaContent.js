@@ -2,7 +2,7 @@
 // Kept general so it stays true; no response-time or price claims.
 const faq = (name, nearby) => [
   { q: `Do you provide plumbing services in ${name}?`, a: `Yes. We serve ${name} and nearby areas including ${nearby}, for leaks, blocked drains, toilets, water heaters, pumps and installations.` },
-  { q: `How do I get a quote for plumbing work in ${name}?`, a: `Call or WhatsApp us on +60 16-678 5404, describe the problem and send a photo if you can. We will give you a free quote before any work starts.` },
+  { q: `How do I get a quote for plumbing work in ${name}?`, a: `Call or WhatsApp us on +60 16-678 5404, describe the problem and send a photo if you can. We will give you a quote before any work starts.` },
 ]
 
 export const areaContent = {

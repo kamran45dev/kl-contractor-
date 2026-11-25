@@ -17,8 +17,8 @@ export const faqs = [
     schema: false,
   },
   {
-    q: 'Do you provide a free quote before starting work?',
-    a: 'Yes, we always provide an upfront, obligation-free quote before any work begins. There are no hidden charges.',
+    q: 'Do you give a quote before starting work?',
+    a: 'Yes, we explain the work and give you a quote before it begins, and no work starts without your approval. There are no hidden charges.',
     schema: true,
   },
   {
