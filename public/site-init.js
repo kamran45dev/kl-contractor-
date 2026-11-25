@@ -1,21 +1,20 @@
 // The Google tag itself (gtag.js and the config call) is in the <head> of index.html.
 
-// Count calls and WhatsApp chats as Google Ads conversions.
-// Set CONVERSION_LABEL to the label from the account's event snippet
-// ('send_to': 'AW-18505451192/<label>'); no events are sent while it is empty.
-var CONVERSION_LABEL = 'UlliCM7hgZodELiNi_hE';
+// Count call-button and WhatsApp-button taps as separate Google Ads conversions.
+// Labels come from each conversion action's event snippet ('send_to': 'AW-18505451192/<label>').
+var CALL_LABEL = 'rilKCOHboL8dELiNi_hE';
+var WHATSAPP_LABEL = 'crrBCOTboL8dELiNi_hE';
 document.addEventListener('click', function (e) {
-  if (!CONVERSION_LABEL) return;
   var link = e.target.closest && e.target.closest('a[href]');
   if (!link) return;
   var href = link.getAttribute('href') || '';
-  if (href.indexOf('tel:') === 0 || href.indexOf('wa.me') !== -1) {
-    gtag('event', 'conversion', {
-      send_to: 'AW-18505451192/' + CONVERSION_LABEL,
-      value: 1.0,
-      currency: 'MYR'
-    });
-  }
+  var label = href.indexOf('tel:') === 0 ? CALL_LABEL : href.indexOf('wa.me') !== -1 ? WHATSAPP_LABEL : '';
+  if (!label) return;
+  gtag('event', 'conversion', {
+    send_to: 'AW-18505451192/' + label,
+    value: 1.0,
+    currency: 'MYR'
+  });
 }, true);
 
 // Load the Google Fonts stylesheet without blocking first paint

@@ -128,7 +128,7 @@ export const contactInfo = {
   phoneRaw: '+60166785404',
   whatsapp: '+60 16-678 5404',
   whatsappRaw: '60166785404',
-  whatsappLink: 'https://wa.me/60166785404?text=KL%20contractors%E2%80%93%20I%20need%20to%20book%20urgent%20service',
+  whatsappLink: 'https://wa.me/60166785404?text=Hi%20KL%20Plumber%2C%20I%20need%20help%20with%20a%20plumbing%20problem.',
   address: 'Kuala Lumpur, Wilayah Persekutuan, Malaysia',
   hours: '24/7 Emergency Service',
 }
